@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 """Data Pre-processing"""
 
 #loading movies.csv file in pandas dataframe
-movies_data=pd.read_csv('\Downloads\movies.csv')
+movies_data=pd.read_csv('movies.csv')
 
 movies_data.head()
 
@@ -57,7 +57,7 @@ print('Movies suggested for you: \n')
 i=1
 
 for movie in sorted_similar_movies:
-  index=movie[0];
+  index=movie[0]
   title_from_index=movies_data[movies_data.index==index]['title'].values[0]
   if(i<30):
     print(i, '.', title_from_index)
